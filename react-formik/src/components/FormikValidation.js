@@ -32,6 +32,16 @@ function FormikValidation() {
 
     })
 
+    let validateComments = value => {
+        let error;
+
+        if (!value.comments) {
+            error.comments = "Required!";
+        }
+
+        return error;
+    }
+
     return (
         <Formik initialValues={initialValues}
             validationSchema={validationSchema}
@@ -60,8 +70,8 @@ function FormikValidation() {
 
                 <div className='form-control'>
                     <label htmlFor='channel' >Comments</label>
-                    <Field as='textarea' id='comments' name='comments' />
-                    <ErrorMessage name='channel' />
+                    <Field as='textarea' id='comments' name='comments' validate={validateComments} />
+                    <ErrorMessage name='comments' component={TextError} />
                 </div>
 
                 <div className='form-control'>
@@ -114,7 +124,7 @@ function FormikValidation() {
                                     {
                                         phNumbers.map((phNumber, index) => (
                                             <div key={index}>
-                                                <Field  name={`phNumbers[${index}]`} />
+                                                <Field name={`phNumbers[${index}]`} />
                                                 <button type='button' onClick={() => remove(index)}>-</button>
                                                 <button type='button' onClick={() => push('')}>+</button>
                                             </div>
