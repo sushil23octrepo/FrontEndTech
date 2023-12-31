@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #343a40;
+        }
+
+        .container {
+            width: 800px;
+            margin: 250px auto;
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            border: 2px solid #a5d8ff;
+            background-color: #fff;
+        }
+
+        .pagination {
+            display: flex;
+            gap: 20px;
+        }
+
+        .pagination button {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: none;
+            background-color: #fff;
+        }
+
+        .pagination .selected-page {
+            background-color: #ffa8a8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn btn--left">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="btn-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+        <div class="pagination">
+            <button>1</button>
+            <button>2</button>
+            <button class="selected-page">3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>...</button>
+            <button>23</button>
+        </div>
+        <button class="btn btn--right">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="btn-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+    </div>
+</body>
+
+</html>
