@@ -1,7 +1,0 @@
-{
-  "name": "PriExp.Portal",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react-vite"
-}
